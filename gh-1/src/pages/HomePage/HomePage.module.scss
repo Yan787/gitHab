@@ -1,0 +1,81 @@
+.err {
+    color: red;
+    position: absolute;
+}
+
+.container {
+    padding-top: 2rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input {
+        padding: 2% 16px;
+        height: 42px;
+        width: 50%;
+        border: 1px solid rgba(144, 144, 144, 0.513);
+        border-radius: 5px;
+        transition: all 1s;
+        background-color: rgba(255, 255, 255, 0.127);
+    }
+
+    .dropdown {
+        position: relative;
+        width: 50%;
+        top: 10px;
+        left: 0;
+        right: 0;
+        max-height: 200px;
+        overflow: scroll;
+        background-color: rgb(247, 247, 247);
+        box-shadow: 0px 3px 8px rgb(172, 172, 172);
+        transition: all 1s;
+    }
+
+    .login {
+        padding: 2% 16px;
+        border-radius: 5px;
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(46, 221, 55);
+            background-color: rgba(224, 224, 224, 0.502);
+        }
+    }
+
+    .repositories {
+        padding-top: 1.5rem;
+        width: 50%;
+        transition: all 1s;
+
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
+
+@media screen and (max-width: 633px) {
+    .input {
+        font-size: 14px !important;
+        width: 80% !important;
+        transition: all 1s;
+    }
+
+    .dropdown {
+        width: 80% !important;
+        transition: all 1s;
+        font-size: 14px;
+    }
+
+    .repositories {
+        width: 80% !important;
+        transition: all 1s;
+
+    }
+}
