@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React, { useEffect, useState } from "react";
 import RepoCard from "../../components/RepoCard/RepoCard";
 import { useDebounce } from "../../hooks/debounce";
@@ -59,7 +60,11 @@ const HomePage = () => {
             ))}
           </ul>
         )}
-        <div className={styles.repositories}>
+        <div
+          className={classNames(styles.repositories, {
+            [styles.openDropDown]: dropdown,
+          })}
+        >
           {areReposLoading && (
             <p className={styles.loading}>Repos are loading...</p>
           )}
